@@ -25,8 +25,7 @@ jobs:
   build:
       runs-on: ubuntu-22.04
       steps:
-        - name: Checkout
-          uses: actions/checkout@v4
+        - uses: actions/checkout@v4
         - name: Install Git LFS
           run: git lfs install
         - name: Pull Git LFS files
