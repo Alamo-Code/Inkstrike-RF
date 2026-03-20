@@ -29,7 +29,7 @@ jobs:
         - name: Install Git LFS
           run: git lfs install
         - name: Pull Git LFS files
-          run: git lfs pull build/Inkstrike-RF.data
+          run: git lfs pull Inkstrike-RF.data
 
   deploy:
     environment:
