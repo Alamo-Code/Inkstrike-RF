@@ -22,14 +22,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  #build:
-      #runs-on: ubuntu-22.04
-      #steps:
-       # - uses: actions/checkout@v4
-        #- name: Install Git LFS
-         # run: git lfs install
-        #- name: Pull Git LFS files
-         # run: git lfs pull Build/Inkstrike-RF.data
+  build:
+      runs-on: ubuntu-22.04
+      steps:
+        - uses: actions/checkout@v4
+        - name: Install Git LFS
+          run: git lfs install
+        - name: Pull Git LFS files
+          run: git lfs pull Build/Inkstrike-RF.data
 
   deploy:
     environment:
@@ -37,11 +37,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Install Git LFS
-        run: git lfs install
-      - name: Pull Git LFS files
-        run: git lfs pull Build/Inkstrike-RF.data
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
