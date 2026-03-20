@@ -26,9 +26,9 @@ jobs:
       runs-on: ubuntu-22.04
       steps:
         - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          lfs: true
+          with:
+            fetch-depth: 0
+            lfs: true
         #- name: Install Git LFS
         #  run: git lfs install
         #- name: Pull Git LFS files
